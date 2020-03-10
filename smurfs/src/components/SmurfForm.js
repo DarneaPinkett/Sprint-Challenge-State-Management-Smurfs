@@ -7,6 +7,7 @@ const SmurfForm = (props) => {
         age: '',
         height: ''
     });
+    console.log(newSmurf);
 
     const handleSubmit = e => {
         e.preventDefault();
@@ -19,7 +20,7 @@ const SmurfForm = (props) => {
                 height: ""
             })
         })
-        props.addSmurf(newSmurf);
+        e.addSmurf(newSmurf);
     };
 
     const handleChanges = e  => {

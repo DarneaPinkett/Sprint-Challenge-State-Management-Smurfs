@@ -1,8 +1,8 @@
 import React, {useEffect} from "react";
 import { connect } from "react-redux";
 import {getSmurfs, addSmurf} from "../actions/index";
-import SmurfForm from "./SmurfForm";
-import SmurfCard from "./SmurfCard;"
+
+import SmurfCard from "./SmurfCard";
 
 const Smurfs = props => {
     const smurfList = props.getSmurfs
