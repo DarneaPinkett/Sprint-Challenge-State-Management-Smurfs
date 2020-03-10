@@ -13,8 +13,8 @@ export const getSmurfs = () => dispatch => {
         dispatch({type: FETCH_DATA_SUCCESS, payload: res.data});
     })
     .catch(err => {
-        console.log(err.res);
-        dispatch({type: FETCH_DATA_FAIL, payload: `${err.res.status} ${err.res.data}`});
+        console.log(err);
+        dispatch({type: FETCH_DATA_FAIL, payload: err});
     });
 };
 

@@ -1,7 +1,8 @@
 import React, {useState} from 'react';
 import Axios from "axios";
+import {addSmurf} from "../actions/index";
 
-const SmurfForm = (props) => {
+const SmurfForm = props => {
     const [newSmurf, setNewSmurf] = useState({
         name: '',
         age: '',
@@ -20,7 +21,7 @@ const SmurfForm = (props) => {
                 height: ""
             })
         })
-        e.addSmurf(newSmurf);
+        addSmurf(newSmurf);
     };
 
     const handleChanges = e  => {
@@ -34,7 +35,7 @@ const SmurfForm = (props) => {
                 <input type="text" name="name" placeholder="name" onChange={handleChanges} value={newSmurf.name} />
                 <input type="text" name="age" placeholder="age" onChange={handleChanges} value={newSmurf.age} />
                 <input type="text" name="height" placeholder="height" onChange={handleChanges} value={newSmurf.height} />
-                <button type="submit">Smurf</button>
+                <button type="submit">Add Smurf</button>
             </form>
         </div>
     )

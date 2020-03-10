@@ -12,7 +12,7 @@ const Smurfs = props => {
 
     return (
         <div>
-            <button onClick={() => props.getSmurfs()}>{props.isFetching ? "error" : "Get Smurf"}</button>
+            <button onClick={() => props.getSmurfs()}>{props.isFetching ? "error" : "Get Gargmel"}</button>
             <div className="smurfcard">
                 {props.smurfs && props.smurfs.map ((item) =>
                 <SmurfCard name={item.name} age={item.age} height={item.height} />)}
